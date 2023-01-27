@@ -44,8 +44,6 @@ const ques = [
 const startQuiz = () => {
     document.getElementById("toggle-start").style.display="none";
     document.getElementById("questions").style.display="block";
-    // document.getElementById("questions").style.margin="auto";
-    document.getElementById("questions").style.justifyContent="center";
 }
 const question = document.querySelector('#question');
 const option1 = document.querySelector('#option-1');
@@ -83,8 +81,6 @@ const quizReload = () => {
     location.reload();
     document.getElementById("questions").style.display="none";
     document.getElementById("toggle-start").style.display="block";
-    // document.getElementById("toggle-start").style.margin="auto";
-    // document.getElementById("toggle-start").style.justifyContent="center";
 }
 
 submit.addEventListener('click', () => {
