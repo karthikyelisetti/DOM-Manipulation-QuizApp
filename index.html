@@ -11,40 +11,65 @@
   <body>
     <div class="container">
       <div class="toggle col-md-12 mt-5">
-        <!-- <div class="toggle-start col-md-6 mt-5">
+        <div class="toggle-start col-md-6 mt-5" id="toggle-start">
           <h1>Test your skills</h1>
           <div class="toggle-content">
             <p>Test out your knowledge right now!!!</p>
             <p>
               Follow the below instruction:
               <ul>
-                <li>Each of the three questions in the test is worth five points. </li>
+                <li>The quiz contains five questions </li>
+                <li>Each of the five questions in the test is worth 1 points. </li>
                 <li>There are no deductions for incorrect responses.</li>
+                <li>There is no restrictions on the number of re-attempts </li>
               </ul>
             </p>
           </div>
           <button type="button" class="btn btn-primary btn-lg" id="btn-start" onclick="startQuiz()">Start Quiz</button>
-          <button type="button" class="btn-start">Start Quiz</button>
-        </div> -->
+        </div>
         <div class="toggle-question mt-5">
-          <div class="questions">
+          <div class="questions" id="questions">
             <h3 id="question">Questions</h3>
             <ul>
               <li>
-                <input type="radio" name="answer" id="ans-1" class="answer" />
-                <label for="ans" id="option1" >Option</label>
+                <div class="form-check">
+                  <input class="form-check-input answer" type="radio" name="ans" id="ans-1">
+                  <label class="form-check-label" for="ans" id="option-1">
+                    Option
+                  </label>
+                </div>
+                <!-- <input type="radio" name="answer" id="ans-1" class="answer" />
+                <label for="ans" id="option-1" >Option</label> -->
               </li>
               <li>
-                <input type="radio" name="answer" id="ans-2" class="answer" />
-                <label for="ans" id="option-2" >Option</label>
+                <div class="form-check">
+                  <input class="form-check-input answer" type="radio" name="ans" id="ans-2">
+                  <label class="form-check-label" for="ans" id="option-2">
+                    Option
+                  </label>
+                </div>
+                <!-- <input type="radio" name="answer" id="ans-2" class="answer" />
+                <label for="ans" id="option-2" >Option</label> -->
               </li>
               <li>
-                <input type="radio" name="answer" id="ans-3" class="answer" />
-                <label for="ans" id="option-3" >Option</label>
+                <div class="form-check">
+                  <input class="form-check-input answer" type="radio" name="ans" id="ans-3">
+                  <label class="form-check-label" for="ans" id="option-3">
+                    Option
+                  </label>
+                </div>
+                <!-- <input type="radio" name="answer" id="ans-3" class="answer" />
+                <label for="ans" id="option-3" >Option</label> -->
               </li>
               <li>
-                <input type="radio" name="answer" id="ans-4" class="answer" />
-                <label for="ans" id="option-4" >Option</label>
+                <div class="form-check">
+                  <input class="form-check-input answer" type="radio" name="ans" id="ans-4">
+                  <label class="form-check-label" for="ans" id="option-4">
+                    Option
+                  </label>
+                </div>
+                <!-- <input type="radio" name="answer" id="ans-4" class="answer" />
+                <label for="ans" id="option-4" >Option</label> -->
               </li>
             </ul>
             <button type="button" class="btn btn-success btn-lg" id="btn-submit">Submit</button>

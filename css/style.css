@@ -1,24 +1,27 @@
-/* https://www.youtube.com/watch?v=rGhH70KUTuk */
-
 body {
   background: linear-gradient(to right, rgb(108, 159, 200), rgb(88, 197, 137));
 }
 .toggle {
+  display: block;
   margin: auto;
   display: flex;
   justify-content: center;
+  margin-left: 25%;  
+}
+.questions {
+  display: none;
 }
 h1 {
   text-align: center;
   text-decoration: underline;
 }
 .toggle-content {
-  padding: 30px;
+  padding: 9px;
 }
 #btn-start {
   display: flex;
   margin: auto;
-  margin-top: 42px;
+  margin-top: 30px;
 }
 .btn-start:hover {
   box-shadow: 2px 4px #319ed4;
@@ -27,7 +30,7 @@ h1 {
 .toggle-start {
   border: 3px solid rgb(80, 14, 8);
   border-radius: 12px;
-  padding: 30px;
+  padding: 15px;
   box-shadow: 6px 9px #9c7cdc;
 }
 .toggle-question {
@@ -60,7 +63,8 @@ input {
 #displayScore {
   background-color: lightgrey;
   margin-top: 12px;
-  padding: 30px 30px;
+  padding: 6px 6px;
+  border-radius: 6px;
   box-shadow: 2px 2px #cfd8e2;
 }
 .scores {
@@ -74,4 +78,17 @@ input {
 .btn-submit:hover {
   box-shadow: 2px 4px #319ed4;
   cursor: pointer;
+}
+#displayScore {
+  text-align: center;
+}
+#displayScore h3 {
+  font-size: 24px;
+  color: #9c7cdc;
+}
+#displayScore .btn {
+  text-align: center;
+}
+#displayScore p {
+  color: rgb(178, 26, 183);
 }
