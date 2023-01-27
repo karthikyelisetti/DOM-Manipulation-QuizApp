@@ -1,7 +1,10 @@
 /* https://www.youtube.com/watch?v=rGhH70KUTuk */
 
 body {
-  /* background: linear-gradient(to right, rgb(108, 159, 200), rgb(88, 197, 137)); */
+  background: linear-gradient(to right, rgb(108, 159, 200), rgb(88, 197, 137));
+}
+.toggle {
+  margin: auto;
   display: flex;
   justify-content: center;
 }
@@ -15,6 +18,7 @@ h1 {
 #btn-start {
   display: flex;
   margin: auto;
+  margin-top: 42px;
 }
 .btn-start:hover {
   box-shadow: 2px 4px #319ed4;
@@ -24,18 +28,50 @@ h1 {
   border: 3px solid rgb(80, 14, 8);
   border-radius: 12px;
   padding: 30px;
-  box-shadow: 6px 9px #6f1414;
+  box-shadow: 6px 9px #9c7cdc;
 }
 .toggle-question {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.questions {
+  width: 40vw;
+  background-color: rgb(3, 38, 49);
+  padding: 30px 30px;
+  border-radius: 12px;
+  box-shadow: 6px 9px #cfd8e2;
+}
+.questions h3 {
+  font-size: 24px;
+  font-weight: 12px;
+  margin: 6px 0 9px 0;
+  margin-bottom: 45px;
+}
+.questions li {
+  font-size: 15px;
+  margin-top: 12px;
+  list-style: none;
+}
+input {
+  cursor: pointer;
+}
+#displayScore {
+  background-color: lightgrey;
+  margin-top: 12px;
+  padding: 30px 30px;
+  box-shadow: 2px 2px #cfd8e2;
+}
+.scores {
+  display: none;
+}
+#btn-submit {
   display: flex;
   margin: auto;
-  height: 50px;
-  width: 150px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  color: aliceblue;
-  background: #319ed4;
-  font-weight: bold;
-  font-size: 18px;
+  margin-top: 42px;
+}
+.btn-submit:hover {
+  box-shadow: 2px 4px #319ed4;
+  cursor: pointer;
 }
