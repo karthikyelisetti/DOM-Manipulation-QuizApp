@@ -100,11 +100,7 @@ const quizReload = () => {
 const scoreSummary = () => {
     document.getElementById("questions").style.display="none";
     document.getElementById("toggle-summary").style.display = "block";
-    let parent = document.getElementById("displayScore");
-    let el = document.createElement("h3");
-    let content = document.createTextNode(`You scored ${score}/${ques.length}`);
-    el.appendChild(content);
-    parent.appendChild(el);
+    
 }
 
 // click event for previous button
@@ -135,6 +131,32 @@ next.addEventListener('click', () => {
     }else {
         progressBar.style.width = parseInt(progressPoints) + "%";
         progressBar.innerText = parseInt(progressPoints) + "%";
+        // Percentage calculation
+        let pCal = parseInt((score / ques.length) * 100);
+        let percentage = pCal + "%"
+        let parent = document.getElementById("summary");
+        let txt="";
+
+        if (pCal >= 90) {
+            txt = "Great job!";
+        } else if (pCal < 90 && pCal >= 60) {
+            txt = "Good job!";
+        } else {
+            txt = "Try again!!!"
+        }
+
+        // Creating elements in the DOM
+        let el = document.createElement("h3");
+        let content = document.createTextNode(`${percentage}  |  ${score}/${ques.length} correct`);
+        el.appendChild(content);
+        parent.appendChild(el);
+
+        let elp = document.createElement("p");
+        let cp = document.createTextNode(`${txt}`);
+        elp.appendChild(cp);
+        parent.appendChild(elp);
+
         scoreSummary();
+        
     }
 });

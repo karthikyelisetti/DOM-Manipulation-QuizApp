@@ -136,7 +136,16 @@ input {
   justify-content: center;
   align-items: center;
 }
-.toggle-summary h1 {
+.toggle-summary h2 {
   padding: 30px;
+  text-align: center;
 }
-
+#summary h3 {
+  text-align: center;
+}
+#divider-line {
+  margin-top: 30px;
+}
+#summary p {
+  margin-left: 25%;
+}
