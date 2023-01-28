@@ -5,12 +5,10 @@ body {
 #toggle-start {
   margin: auto;
   justify-content: center;
-  /* margin-left: 25%;  */
 }
 #toggle-summary {
   margin: auto;
   justify-content: center;
-  /* margin-left: 25%;  */
 }
 .questions {
   display: none;
@@ -29,36 +27,39 @@ h1 {
   display: flex;
   margin: auto;
   margin-top: 30px;
+  background: linear-gradient(to right, rgb(85, 181, 132), #9c7cdc);
 }
 .btn-start:hover {
   box-shadow: 2px 4px #319ed4;
   cursor: pointer;
 }
 .toggle-start {
-  border: 3px solid rgb(80, 14, 8);
+  border: 3px solid #cfd8e2;
+  background-color: rgb(3, 38, 49);
+  color: #c6e5e3;
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 6px 9px #9c7cdc;
+  box-shadow: 6px 6px #c6e5e3;
 }
 .toggle-question {
   margin: auto;
   display: flex;
   justify-content: center;
-  color: #fff;
+  color: #c6e5e3;
 }
 .questions {
-  width: 40vw;
+  max-width: 600px;
   background-color: rgb(3, 38, 49);
   padding: 45px 45px;
   border-radius: 12px;
-  box-shadow: 6px 9px #cfd8e2;
+  box-shadow: 6px 6px #cfd8e2;
 }
 .toggle-summary {
-  width: 40vw;
+  max-width: 600px;
   background-color: rgb(3, 38, 49);
   padding: 45px 45px;
   border-radius: 12px;
-  box-shadow: 6px 9px #cfd8e2;
+  box-shadow: 6px 6px #cfd8e2;
 }
 .questions h3 {
   font-size: 24px;
