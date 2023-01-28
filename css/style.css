@@ -7,7 +7,15 @@ body {
   justify-content: center;
   /* margin-left: 25%;  */
 }
+#toggle-summary {
+  margin: auto;
+  justify-content: center;
+  /* margin-left: 25%;  */
+}
 .questions {
+  display: none;
+}
+.toggle-summary {
   display: none;
 }
 h1 {
@@ -39,6 +47,13 @@ h1 {
   color: #fff;
 }
 .questions {
+  width: 40vw;
+  background-color: rgb(3, 38, 49);
+  padding: 45px 45px;
+  border-radius: 12px;
+  box-shadow: 6px 9px #cfd8e2;
+}
+.toggle-summary {
   width: 40vw;
   background-color: rgb(3, 38, 49);
   padding: 45px 45px;
@@ -121,6 +136,7 @@ input {
   justify-content: center;
   align-items: center;
 }
-.progress-bar {
-  width: 20%;
+.toggle-summary h1 {
+  padding: 30px;
 }
+

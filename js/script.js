@@ -46,6 +46,7 @@ const ques = [
 const startQuiz = () => {
     document.getElementById("toggle-start").style.display="none";
     document.getElementById("questions").style.display="block";
+    document.getElementById("toggle-summary").style.display="none";
     document.getElementById("btn-previous").style.display="none";
     progressBar.style.width = parseInt(progressPoints) + "%";
 }
@@ -92,13 +93,25 @@ const getCheckedAnswer = () => {
 const quizReload = () => {
     location.reload();
     document.getElementById("questions").style.display="none";
+    document.getElementById("toggle-summary").style.display="none";
     document.getElementById("toggle-start").style.display="block";
+}
+
+const scoreSummary = () => {
+    document.getElementById("questions").style.display="none";
+    document.getElementById("toggle-summary").style.display = "block";
+    let parent = document.getElementById("displayScore");
+    let el = document.createElement("h3");
+    let content = document.createTextNode(`You scored ${score}/${ques.length}`);
+    el.appendChild(content);
+    parent.appendChild(el);
 }
 
 // click event for previous button
 prev.addEventListener('click', () => {    
     counter--;
     score--;
+    progressPoints -= (100/ques.length);
     loadQuestion();
     if (counter == 0) {
         document.getElementById("btn-previous").style.display="none";
@@ -111,10 +124,10 @@ next.addEventListener('click', () => {
     document.getElementById("btn-previous").style.display="block";
     if (checkedAnswer === ques[counter].answer) {
         score++;
-        progressPoints += (100/ques.length);
-        progressBar.style.width = parseInt(progressPoints) + "%";
-        progressBar.innerText = parseInt(progressPoints) + "%";
     }
+    progressPoints += (100/ques.length);
+    progressBar.style.width = parseInt(progressPoints) + "%";
+    progressBar.innerText = parseInt(progressPoints) + "%";
 
     counter++; // counter to check the question count and number iteration to show summary of scores
     if (counter < ques.length) {
@@ -122,20 +135,6 @@ next.addEventListener('click', () => {
     }else {
         progressBar.style.width = parseInt(progressPoints) + "%";
         progressBar.innerText = parseInt(progressPoints) + "%";
-        document.getElementById("btn-next").style.display="none";
-        document.getElementById("btn-previous").style.display="none";
-        let msg = "";
-        if (score < 3) {
-            msg = "If you want to improve your score, consider taking the test again!!!";
-        }else {
-            msg="Congratulations! You obtained a passing score on the test.";
-        }
-        showAnswers.innerHTML = `
-            <h3>You scored ${score}/${ques.length} </h3>
-            <h4>${msg}</h4>
-            <button type="button" class="btn btn-primary" id="re-attempt" onclick="quizReload()">Re-Attempt Quiz</button>
-        `;
-
-        showAnswers.classList.remove('scores');
+        scoreSummary();
     }
 });
