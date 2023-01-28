@@ -48,14 +48,14 @@ h1 {
   color: #c6e5e3;
 }
 .questions {
-  max-width: 600px;
+  max-width: 660px;
   background-color: rgb(3, 38, 49);
   padding: 45px 45px;
   border-radius: 12px;
   box-shadow: 6px 6px #cfd8e2;
 }
 .toggle-summary {
-  max-width: 600px;
+  max-width: 660px;
   background-color: rgb(3, 38, 49);
   padding: 45px 45px;
   border-radius: 12px;
