@@ -142,7 +142,7 @@ next.addEventListener('click', () => {
         } else if (pCal < 90 && pCal >= 60) {
             txt = "Good job!";
         } else {
-            txt = "Try again!!!"
+            txt = "Try again!"
         }
 
         // Creating elements in the DOM
