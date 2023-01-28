@@ -27,9 +27,12 @@
           </div>
           <button type="button" class="btn btn-primary btn-lg" id="btn-start" onclick="startQuiz()">Start Quiz</button>
         </div>
-        <div class="toggle-question mt-5">
+        <div class="toggle-question mt-5">                
           <div class="questions" id="questions">
-            <h3 id="question">Questions</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="quiz-progress"></div>
+            </div>
+            <h3 id="question" class="mt-5">Questions</h3>
             <ul>
               <li>
                 <div class="form-check">
@@ -38,8 +41,6 @@
                     Option
                   </label>
                 </div>
-                <!-- <input type="radio" name="answer" id="ans-1" class="answer" />
-                <label for="ans" id="option-1" >Option</label> -->
               </li>
               <li>
                 <div class="form-check">
@@ -48,8 +49,6 @@
                     Option
                   </label>
                 </div>
-                <!-- <input type="radio" name="answer" id="ans-2" class="answer" />
-                <label for="ans" id="option-2" >Option</label> -->
               </li>
               <li>
                 <div class="form-check">
@@ -58,8 +57,6 @@
                     Option
                   </label>
                 </div>
-                <!-- <input type="radio" name="answer" id="ans-3" class="answer" />
-                <label for="ans" id="option-3" >Option</label> -->
               </li>
               <li>
                 <div class="form-check">
@@ -68,11 +65,12 @@
                     Option
                   </label>
                 </div>
-                <!-- <input type="radio" name="answer" id="ans-4" class="answer" />
-                <label for="ans" id="option-4" >Option</label> -->
               </li>
             </ul>
-            <button type="button" class="btn btn-success btn-lg" id="btn-submit">Submit</button>
+            <div class="btn-next-prev">
+              <button type="button" class="btn btn-success btn-lg" id="btn-previous">Previous</button>
+              <button type="button" class="btn btn-success btn-lg" id="btn-next">Next</button>
+            </div>            
             <div id="displayScore" class="scores"></div>
           </div>
         </div>    

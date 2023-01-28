@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(to right, rgb(108, 159, 200), rgb(88, 197, 137));
+  font-family: cursive !important;
 }
 #toggle-start {
   margin: auto;
@@ -68,17 +69,41 @@ input {
 .scores {
   display: none;
 }
-#btn-submit {
+.btn-next-prev {
+  display: flex;
+  flex-direction: row;
+}
+#btn-next {
   display: flex;
   margin: auto;
   margin-top: 42px;
+  width: 150px;
+  justify-content: center;
+  background: linear-gradient(to right, rgb(85, 181, 132), #9c7cdc);
 }
-.btn-submit:hover {
+.btn-next:hover {
   box-shadow: 2px 4px #319ed4;
   cursor: pointer;
 }
+#btn-previous {
+  display: flex;
+  margin: auto;
+  margin-top: 42px;
+  width: 150px;
+  justify-content: center;
+  background: linear-gradient(to right, rgb(85, 181, 132), #9c7cdc);
+}
+.btn-previous:hover {
+  box-shadow: 2px 4px #319ed4;
+  cursor: pointer;
+}
+
 #displayScore {
   text-align: center;
+}
+#displayScore h3 {
+  font-size: 24px;
+  color: #9c7cdc;
 }
 #displayScore h3 {
   font-size: 24px;
@@ -89,4 +114,13 @@ input {
 }
 #displayScore p {
   color: rgb(178, 26, 183);
+}
+#quiz-progress {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress-bar {
+  width: 20%;
 }
